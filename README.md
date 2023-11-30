@@ -43,6 +43,7 @@ directories:
 .
 ├── DESCRIPTION
 ├── dev
+│   └── setup.R
 ├── inst
 │   └── www
 │       ├── logoWBDG.png
@@ -50,19 +51,17 @@ directories:
 ├── LICENSE
 ├── LICENSE.md
 ├── man
-│   ├── figures
-│   ├── runMyApp.Rd
-│   └── tester3-package.Rd
+│   └── figures
+│       └── susospatial.png
+├── myapp.Rproj
 ├── NAMESPACE
 ├── R
 │   ├── module1.R
+│   ├── myapp-package.R
 │   ├── runapp.R
 │   ├── server.R
-│   ├── tester3-package.R
 │   └── ui.R
-├── README.Rmd
-└── tester3.Rproj
-    
+└── README.Rmd
 ```
 
 In addition the template also creates a local **.Rprofile**, with the

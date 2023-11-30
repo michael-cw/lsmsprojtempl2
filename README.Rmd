@@ -43,6 +43,7 @@ The project will be created in a new directory with the name you provided. The p
 .
 ├── DESCRIPTION
 ├── dev
+│   └── setup.R
 ├── inst
 │   └── www
 │       ├── logoWBDG.png
@@ -50,19 +51,18 @@ The project will be created in a new directory with the name you provided. The p
 ├── LICENSE
 ├── LICENSE.md
 ├── man
-│   ├── figures
-│   ├── runMyApp.Rd
-│   └── tester3-package.Rd
+│   └── figures
+│       └── susospatial.png
+├── myapp.Rproj
 ├── NAMESPACE
 ├── R
 │   ├── module1.R
+│   ├── myapp-package.R
 │   ├── runapp.R
 │   ├── server.R
-│   ├── tester3-package.R
 │   └── ui.R
-├── README.Rmd
-└── tester3.Rproj
-    
+└── README.Rmd
+
 ```
 
 
