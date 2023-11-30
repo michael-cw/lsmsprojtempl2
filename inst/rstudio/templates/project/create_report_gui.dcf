@@ -1,0 +1,41 @@
+Binding: create_proj_report_gui
+Title: LSMS Shiny App Template
+OpenFiles: dev/setup.R, R/runapp.R, R/ui.R, R/server.R, DESCRIPTION, README.Rmd
+
+Parameter: logo
+Widget: SelectInput
+Label: Select Logo
+Fields: SuSo Quality, SuSo Spatial, None
+Default: None
+Position: left
+
+Parameter: author
+Widget: TextInput
+Label: Package Author (First Last)
+Default: Your Name
+Position: right
+
+Parameter: full_title
+Widget: TextInput
+Label: Full Title
+Default: LSMS Shiny App Template
+Position: right
+
+Parameter: gitdir
+Widget: TextInput
+Label: Git Directory
+Default: your_git_dir
+Position: right
+
+Parameter: runappname
+Widget: TextInput
+Label: Name for runapp function
+Default: runMyApp
+Position: left
+
+
+Parameter: with_git
+Widget: CheckboxInput
+Label: Create a git repository
+Default: Off
+Position: left

@@ -1,0 +1,20 @@
+Package: lsmsrprojtempl2
+Title: Rstudio/R project set-up for LSMS style shiny application with
+    modules
+Version: 0.1.0
+Authors@R: 
+    person("Michael", "Wild", , "mwild@worldbank.org", role = c("aut", "cre"))
+Description: This package is intended to be used as a project template for
+    RStudio projects, when creating LSMS style special purpose
+    applications (SPA) by using R's Shiny framework as R packages.  It
+    includes basic styles and functions to create a SPA with modules.
+License: MIT + file LICENSE
+Imports:
+    formatR,
+    usethis,
+    utils,
+    rlang
+Encoding: UTF-8
+Language: en
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
