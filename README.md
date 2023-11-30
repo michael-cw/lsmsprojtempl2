@@ -26,8 +26,8 @@ see [here](https://reproducibility.worldbank.org/index.php/home).
 
 After installing the package, you can create a new project from the
 template by selecting “File \> New Project \> New Directory \> LSMS
-report template” in Rstudio. You will be asked to provide a project name
-and a directory where the project should be created.
+Shiny App Template” in Rstudio. You will be asked to provide a project
+name and a directory where the project should be created.
 
 <p float="left">
 <img src="./man/img/proj1.png" width="32%" />
@@ -88,13 +88,18 @@ done by:
 runMyApp()
 ```
 
-And (if you haven’t added any modules) will result in the following:
+And (if you haven’t added any modules, and have installed the required
+libraries, which are DT, shiny, sass and waiter) will result in the
+following Shiny app:
 
 <div align="center">
 
 <img src="./man/img/app.png" width="80%" />
 
 </div>
+
+Running *devtools::check()* eventually should also result in a
+successful check without any errors or warnings.
 
 **ATTENTION:** This package is at an early stage of development and will
 be updated regularly. Please check for updates regularly, and if you
