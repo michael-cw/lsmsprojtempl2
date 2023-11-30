@@ -105,9 +105,10 @@ create_proj_report_gui <- function(path, ...) {
   # usethis::use_author(dots$author)
 
   # git and build ignore
-  usethis::use_git_ignore(c(".Rproj", ".Rproj.user", ".Rhistory", "dev",
-  ".RData", ".Ruserdata", ".Rbuildignore"))
-  usethis::use_build_ignore(c("dev", "README.Rmd", ".github", "LICENSE.md"))
+  rproj<-paste0(basename(normalizePath(path)), ".Rproj")
+  usethis::use_git_ignore(c(rproj, ".Rproj.user", ".Rhistory", "dev",
+  ".RData", ".Ruserdata", ".Rbuildignore", ".Rprofile"))
+  usethis::use_build_ignore(c("dev", "README.Rmd", ".github", "LICENSE.md", "CODE_OF_CONDUCT.md"))
   # add packages
   usethis::use_package("shiny")
   usethis::use_package("DT")
@@ -133,7 +134,10 @@ create_proj_report_gui <- function(path, ...) {
     "PACK_NAME" = basename(normalizePath(path)),
     "GITREPO" = dots$gitdir,
     "RUNAPPNAME" = dots$runappname,
-    "RUNAPPSERVER" = paste0(dots$runappname, "Server")
+    "RUNAPPSERVER" = paste0(dots$runappname, "Server"),
+    "AUTHOR" = dots$author,
+    "AFIRST" = afirst,
+    "ALAST" = alast
   )
   replace_and_save_rmd(system.file("readme", "README.Rmd", package = "lsmsrprojtempl2"), path, replacements)
 
@@ -158,6 +162,10 @@ create_proj_report_gui <- function(path, ...) {
   # D. module file
   replace_and_save_rmd(system.file("templates", "module1.R", package = "lsmsrprojtempl2"), file.path(path, "R"), replacements)
   #formatR::tidy_file(file.path(path, "R", "module1.R"))
+
+  ########################################
+  # E. setup file --> To dev folder
+  replace_and_save_rmd(system.file("templates", "setup.R", package = "lsmsrprojtempl2"), file.path(path, "dev"), replacements)
 
   # write .Rprofile file
   write_rprofile <- function(path) {
